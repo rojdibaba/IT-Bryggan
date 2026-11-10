@@ -56,7 +56,30 @@
   <main id="main-content" class="page-content">
     <h1 class="page-content__title">Om mig</h1>
     
-    <!-- Sidans unika sektioner och artiklar här -->
+    <article class="profile-card">
+      <figure class="profile-card__figure">
+        <!-- Byt ut src mot en riktig bild i images-mappen -->
+        <img class="profile-card__image" src="../images/mr-x.png" alt="Porträtt av den fiktiva systemutvecklaren Mr. X" width="200" height="300">
+        <figcaption class="profile-card__caption">Mr. X - Systemutvecklare under utbildning</figcaption>
+      </figure>
+
+      <div class="profile-card__body">
+        <h2 class="profile-card__heading">Vem är jag?</h2>
+        <p class="profile-card__text">Jag är en engagerad och lösningsorienterad student som studerar IT-Säkerhet och mjukvarutesting. Jag brinner för att göra digitala system trygga, säkra och buggfria för alla användare.</p>
+        
+        <h2 class="profile-card__heading">Vad jag vill arbeta med</h2>
+        <p class="profile-card__text">I framtiden vill jag arbeta med <strong>IT-säkerhet</strong> och <strong>mjukvarutesting</strong>. Mitt mål är att arbeta som säkerhetsspecialist eller testare där jag får hjälpa företag att hitta sårbarheter, kvalitetssäkra kod och bygga upp ett starkt skydd mot cyberhot.</p>
+
+        <!-- Exempel på JS-krok för en interaktion (t.ex. visa mer info) -->
+        <button type="button" class="profile-card__action-btn"
+                data-js-action="expand"
+                data-info="bio-extended"
+                data-js-target="bio-container">
+          Läs mer om min bakgrund
+        </button>
+        <div id="bio-container" class="profile-card__target" data-js-target="bio-container" aria-live="polite"></div>
+      </div>
+    </article>
   </main>
 
   <!-- BLOCK: site-footer -->
