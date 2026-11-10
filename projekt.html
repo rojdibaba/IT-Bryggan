@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Byt ut titel och beskrivning unikt för varje undersida -->
+  <title>Om mig – Alex Lind Portfolio</title>
+  <meta name="description" content="Presentation av den fiktiva systemutvecklaren Alex Lind och hens bakgrund.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <!-- WCAG: Låter tangentbordsanvändare hoppa direkt till <main> -->
+  <a class="skip-link" href="#main-content">Hoppa till huvudinnehåll</a>
+
+  <!-- BLOCK: site-header -->
+  <header class="site-header">
+    <a class="site-header__brand" href="index.html">Mr. X</a>
+
+    <!-- JS: Öppnar och stänger mobilmenyn genom att växla synlighet på menylistan -->
+    <button type="button" class="site-header__menu-btn"
+            data-js-action="toggle"
+            data-menu-state="closed"
+            data-js-target="main-navigation"
+            aria-expanded="false">
+      Meny
+    </button>
+
+    <!-- BLOCK: main-nav -->
+    <nav class="main-nav" aria-label="Huvudmeny" data-js-target="main-navigation">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <!-- MODIFIER: main-nav__link--active + aria-current på den aktiva sidan -->
+          <a class="main-nav__link main-nav__link--active" href="index.html" aria-current="page">Om mig</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="kompetenser.html">Kompetenser</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="projekt.html">Projekt</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="utbildning.html">Utbildning och erfarenhet</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="referenser.html">Referenser</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="kontakt.html">Kontakt</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- BLOCK: page-content (Här lägger varje gruppmedlem in sin sidas innehåll) -->
+  <main id="main-content" class="page-content">
+    <h1 class="page-content__title">Projekt</h1>
+    
+    <!-- Sidans unika sektioner och artiklar här -->
+  </main>
+
+  <!-- BLOCK: site-footer -->
+  <footer class="site-footer">
+    <p class="site-footer__copyright">&copy; 2026 Mr. X Fiktiv portfolio för kursinlämning.</p>
+    <ul class="site-footer__links">
+      <li class="site-footer__item">
+        <a class="site-footer__link" href="https://github.com/">Mr. X GitHub-profil</a>
+      </li>
+      <li class="site-footer__item">
+        <a class="site-footer__link" href="https://linkedin.com/">Mr. X LinkedIn-profil</a>
+      </li>
+    </ul>
+  </footer>
+</body>
+</html>
