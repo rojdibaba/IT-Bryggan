@@ -3,21 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Byt ut titel och beskrivning unikt för varje undersida -->
   <title>Kompetenser - Mr.X Portfolio</title>
-  <meta name="description" content="Översikt över Mr. X tekniska kompetenser, programmeringsspråk och verktyg.">
+  <meta name="description" content="Presentation av den fiktiva systemutvecklaren Mr. X.">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
 </head>
 <body>
-  <!-- WCAG: Låter tangentbordsanvändare hoppa direkt till <main> -->
   <a class="skip-link" href="#main-content">Hoppa till huvudinnehåll</a>
 
-  <!-- BLOCK: site-header -->
   <header class="site-header">
     <a class="site-header__brand" href="index.html">Mr. X</a>
 
-    <!-- JS: Öppnar och stänger mobilmenyn genom att växla synlighet på menylistan -->
     <button type="button" class="site-header__menu-btn"
             data-js-action="toggle"
             data-menu-state="closed"
@@ -26,13 +22,14 @@
       Meny
     </button>
 
-    <!-- BLOCK: main-nav -->
     <nav class="main-nav" aria-label="Huvudmeny" data-js-target="main-navigation">
-     <ul class="main-nav__list">
+      <ul class="main-nav__list">
         <li class="main-nav__item">
+          <!-- BORTTAGET HÄRIFRÅN: active-klass och aria-current -->
           <a class="main-nav__link" href="index.html">Om mig</a>
         </li>
         <li class="main-nav__item">
+          <!-- TILLAGT HÄR: Nu vet skärmläsaren att vi är på Kompetenser -->
           <a class="main-nav__link main-nav__link--active" href="kompetenser.html" aria-current="page">Kompetenser</a>
         </li>
         <li class="main-nav__item">
@@ -51,48 +48,43 @@
     </nav>
   </header>
 
-  <!-- BLOCK: page-content (Här lägger varje gruppmedlem in sin sidas innehåll) -->
   <main id="main-content" class="page-content">
     <h1 class="page-content__title">Kompetenser</h1>
     
-    <!-- Sidans unika sektioner och artiklar här -->
-     <table class = "competence-table">
-      
-    <caption class = "competence-table__caption">Översikten av mina tekniska kompetenser</caption>
-
-    <thead class = "competence-table__head">
-        <tr class = "competence-table__row">
-            <th class = "competence-table__header" scope="col">Kompetens</th>
-            <th class = "competence-table__header" scope="col">Nivå</th>
-            <th class = "competence-table__header" scope="col">Tekniker & Verktyg</th>
-        </tr>
-    </thead>
-    <tbody class = "competence-table__body">
-        <tr class = "competence-table__row">
-            <td class = "competence-table__data">Webbutveckling</td>
-            <td class = "competence-table__data">Avancerad</td>
-            <td class = "competence-table__data">HTML, CSS, JavaScript, C#, Python</td>
-        </tr>
-        <tr class = "competence-table__row">
-            <td class = "competence-table__data">Databashantering</td>
-            <td class = "competence-table__data">Medel</td>
-            <td class = "competence-table__data">MySQL, PostgreSQL, MongoDB</td>
-        </tr>
-        <tr class = "competence-table__row">
-            <td class = "competence-table__data">Versionskontroll</td>
-            <td class = "competence-table__data">Avancerad</td>
-            <td class = "competence-table__data">Git, GitHub, GitLab</td>
-        </tr>
-        <tr class = "competence-table__row">
-            <td class = "competence-table__data">Agil utveckling</td>
-            <td class = "competence-table__data">Medel</td>
-            <td class = "competence-table__data">Scrum, Kanban, Jira</td>
-        </tr>
+     <table class="competence-table">
+      <caption class="competence-table__caption">Översikten av mina tekniska kompetenser</caption>
+      <thead class="competence-table__head">
+          <tr class="competence-table__row">
+              <th class="competence-table__header" scope="col">Kompetens</th>
+              <th class="competence-table__header" scope="col">Nivå</th>
+              <th class="competence-table__header" scope="col">Tekniker & Verktyg</th>
+          </tr>
+      </thead>
+      <tbody class="competence-table__body">
+          <tr class="competence-table__row">
+              <th class="competence-table__header competence-table__header--row" scope="row">Webbutveckling</th>
+              <td class="competence-table__data">Avancerad</td>
+              <td class="competence-table__data">HTML, CSS, JavaScript, C#, Python</td>
+          </tr>
+          <tr class="competence-table__row">
+              <th class="competence-table__header competence-table__header--row" scope="row">Databashantering</th>
+              <td class="competence-table__data">Medel</td>
+              <td class="competence-table__data">MySQL, PostgreSQL, MongoDB</td>
+          </tr>
+          <tr class="competence-table__row">
+              <th class="competence-table__header competence-table__header--row" scope="row">Versionskontroll</th>
+              <td class="competence-table__data">Avancerad</td>
+              <td class="competence-table__data">Git, GitHub, GitLab</td>
+          </tr>
+          <tr class="competence-table__row">
+              <th class="competence-table__header competence-table__header--row" scope="row">Agil utveckling</th>
+              <td class="competence-table__data">Medel</td>
+              <td class="competence-table__data">Scrum, Kanban, Jira</td>
+          </tr>
       </tbody>
      </table>
   </main>
 
-  <!-- BLOCK: site-footer -->
   <footer class="site-footer">
     <p class="site-footer__copyright">&copy; 2026 Mr. X Fiktiv portfolio för kursinlämning.</p>
     <ul class="site-footer__links">
