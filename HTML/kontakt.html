@@ -51,7 +51,55 @@
   <main id="main-content" class="page-content">
     <h1 class="page-content__title">Kontakt</h1>
     
-    <!-- Sidans unika sektioner och artiklar här -->
+    <section class="contact-section">
+      <h2 class="contact-section__heading">Skicka ett meddelande</h2>
+      <p class="contact-section__intro">Har du frågor om mig, examensarbete eller säkerhetstester? Fyll i formuläret nedan.</p>
+
+      <!-- data-js-action="validate-form" är kroken som JavaScript lyssnar på -->
+      <form class="contact-form" action="tack.php" method="post" data-js-action="validate-form" novalidate>
+        
+        <div class="contact-form__field">
+          <label class="contact-form__label" for="name">Namn (obligatoriskt):</label>
+          <input class="contact-form__input" type="text" id="name" name="name" required autocomplete="name">
+        </div>
+
+        <div class="contact-form__field">
+          <label class="contact-form__label" for="email">E-postadress (obligatoriskt):</label>
+          <input class="contact-form__input" type="email" id="email" name="email" required autocomplete="email">
+        </div>
+
+        <div class="contact-form__field">
+          <label class="contact-form__label" for="subject">Vad gäller ditt ärende?</label>
+          <select class="contact-form__select" id="subject" name="subject">
+            <option value="Säkerhetstest / Mjukvarutesting">Säkerhetstest / Mjukvarutesting</option>
+            <option value="LIA / Jobberbjudande">Frågor om dig</option>
+            <option value="Övrig fråga">Övrig fråga</option>
+          </select>
+        </div>
+
+        <fieldset class="contact-form__fieldset">
+          <legend class="contact-form__legend">Hur vill du bli kontaktad?</legend>
+          <div class="contact-form__radio-group">
+            <input class="contact-form__radio" type="radio" id="contact-email" name="contact_method" value="E-post" checked>
+            <label class="contact-form__radio-label" for="contact-email">Via e-post</label>
+          </div>
+          <div class="contact-form__radio-group">
+            <input class="contact-form__radio" type="radio" id="contact-linkedin" name="contact_method" value="LinkedIn">
+            <label class="contact-form__radio-label" for="contact-linkedin">Via LinkedIn</label>
+          </div>
+        </fieldset>
+
+        <div class="contact-form__field">
+          <label class="contact-form__label" for="message">Meddelande (minst 10 tecken):</label>
+          <textarea class="contact-form__textarea" id="message" name="message" rows="4" required></textarea>
+        </div>
+
+        <!-- Här skriver JavaScript ut eventuella felmeddelanden. aria-live gör att skärmläsare läser upp felet direkt -->
+        <p class="contact-form__feedback" data-js-target="form-feedback" aria-live="assertive"></p>
+
+        <button class="contact-form__submit" type="submit">Skicka meddelande</button>
+      </form>
+    </section>
   </main>
 
   <footer class="site-footer">
