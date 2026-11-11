@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Byt ut titel och beskrivning unikt för varje undersida -->
+
   <title>Om mig - Mr.X Portfolio</title>
   <meta name="description" content="Presentation av den fiktiva systemutvecklaren Mr. X.">
   <link rel="stylesheet" href="css/style.css">
@@ -13,7 +13,6 @@
   <!-- WCAG: Låter tangentbordsanvändare hoppa direkt till <main> -->
   <a class="skip-link" href="#main-content">Hoppa till huvudinnehåll</a>
 
-  <!-- BLOCK: site-header -->
   <header class="site-header">
     <a class="site-header__brand" href="index.html">Mr. X</a>
 
@@ -26,11 +25,9 @@
       Meny
     </button>
 
-    <!-- BLOCK: main-nav -->
     <nav class="main-nav" aria-label="Huvudmeny" data-js-target="main-navigation">
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <!-- MODIFIER: main-nav__link--active + aria-current på den aktiva sidan -->
           <a class="main-nav__link main-nav__link--active" href="index.html" aria-current="page">Om mig</a>
         </li>
         <li class="main-nav__item">
@@ -52,13 +49,12 @@
     </nav>
   </header>
 
-  <!-- BLOCK: page-content (Här lägger varje gruppmedlem in sin sidas innehåll) -->
   <main id="main-content" class="page-content">
     <h1 class="page-content__title">Om mig</h1>
     
     <article class="profile-card">
       <figure class="profile-card__figure">
-        <!-- Byt ut src mot en riktig bild i images-mappen -->
+
         <img class="profile-card__image" src="../images/mr-x.png" alt="Porträtt av den fiktiva systemutvecklaren Mr. X" width="200" height="300">
         <figcaption class="profile-card__caption">Mr. X - Systemutvecklare under utbildning</figcaption>
       </figure>
@@ -70,7 +66,7 @@
         <h2 class="profile-card__heading">Vad jag vill arbeta med</h2>
         <p class="profile-card__text">I framtiden vill jag arbeta med <strong>IT-säkerhet</strong> och <strong>mjukvarutesting</strong>. Mitt mål är att arbeta som säkerhetsspecialist eller testare där jag får hjälpa företag att hitta sårbarheter, kvalitetssäkra kod och bygga upp ett starkt skydd mot cyberhot.</p>
 
-        <!-- Exempel på JS-krok för en interaktion (t.ex. visa mer info) -->
+
         <button type="button" class="profile-card__action-btn"
                 data-js-action="expand"
                 data-info="bio-extended"
@@ -82,7 +78,6 @@
     </article>
   </main>
 
-  <!-- BLOCK: site-footer -->
   <footer class="site-footer">
     <p class="site-footer__copyright">&copy; 2026 Mr. X Fiktiv portfolio för kursinlämning.</p>
     <ul class="site-footer__links">
