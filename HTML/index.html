@@ -1,93 +1,138 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sv">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Om mig - Mr.X Portfolio</title>
-  <meta name="description" content="Presentation av den fiktiva systemutvecklaren Mr. X.">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
-</head>
-<body>
-  <!-- WCAG: Låter tangentbordsanvändare hoppa direkt till <main> -->
-  <a class="skip-link" href="#main-content">Hoppa till huvudinnehåll</a>
+    <title>IT-Bryggan - Vi matchar kund med konsult</title>
+    <meta
+      name="description"
+      content="IT-Bryggan är en fiktiv konsultfirma som matchar kunder med IT-konsulter."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <!-- WCAG: Låter tangentbordsanvändare hoppa direkt till <main> -->
+    <a class="skip-link" href="#main-content">Hoppa till huvudinnehåll</a>
 
-  <header class="site-header">
-    <a class="site-header__brand" href="index.html">Mr. X</a>
+    <header class="site-header">
+      <a class="site-header__brand" href="index.html">IT-Bryggan</a>
 
-    <!-- JS: Öppnar och stänger mobilmenyn genom att växla synlighet på menylistan -->
-    <button type="button" class="site-header__menu-btn"
-            data-js-action="toggle"
-            data-menu-state="closed"
-            data-js-target="main-navigation"
-            aria-expanded="false">
-      Meny
-    </button>
+      <!-- JS: Öppnar och stänger mobilmenyn genom att växla synlighet på menylistan -->
+      <button
+        type="button"
+        class="site-header__menu-btn"
+        data-js-action="toggle"
+        data-menu-state="closed"
+        data-js-target="main-navigation"
+        aria-expanded="false"
+      >
+        Meny
+      </button>
 
-    <nav class="main-nav" aria-label="Huvudmeny" data-js-target="main-navigation">
-      <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--active" href="index.html" aria-current="page">Om mig</a>
+      <nav
+        class="main-nav"
+        aria-label="Huvudmeny"
+        data-js-target="main-navigation"
+      >
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a
+              class="main-nav__link main-nav__link--active"
+              href="index.html"
+              aria-current="page"
+              >Om mig</a
+            >
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="kompetenser.html">Kompetenser</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="projekt.html">Projekt</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="utbildning.html"
+              >Utbildning och erfarenhet</a
+            >
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="referenser.html">Referenser</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="kontakt.html">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content" class="page-content">
+      <h1 class="page-content__title">Om mig</h1>
+
+      <article class="profile-card">
+        <figure class="profile-card__figure">
+          <img
+            class="profile-card__image"
+            src="../images/mr-x.png"
+            alt="Porträtt av vår konsult Robin W"
+            width="200"
+            height="300"
+          />
+          <figcaption class="profile-card__caption">
+            Mr. X - Systemutvecklare under utbildning
+          </figcaption>
+        </figure>
+
+        <div class="profile-card__body">
+          <h2 class="profile-card__heading">Vem är jag?</h2>
+          <p class="profile-card__text">
+            Jag är en engagerad och lösningsorienterad student som studerar
+            IT-Säkerhet och mjukvarutesting. Jag brinner för att göra digitala
+            system trygga, säkra och buggfria för alla användare.
+          </p>
+
+          <h2 class="profile-card__heading">Vad jag vill arbeta med</h2>
+          <p class="profile-card__text">
+            I framtiden vill jag arbeta med <strong>IT-säkerhet</strong> och
+            <strong>mjukvarutesting</strong>. Mitt mål är att arbeta som
+            säkerhetsspecialist eller testare där jag får hjälpa företag att
+            hitta sårbarheter, kvalitetssäkra kod och bygga upp ett starkt skydd
+            mot cyberhot.
+          </p>
+
+          <button
+            type="button"
+            class="profile-card__action-btn"
+            data-js-action="expand"
+            data-info="bio-extended"
+            data-js-target="bio-container"
+          >
+            Läs mer om min bakgrund
+          </button>
+          <div
+            id="bio-container"
+            class="profile-card__target"
+            data-js-target="bio-container"
+            aria-live="polite"
+          ></div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p class="site-footer__copyright">&copy; 2026 IT-Bryggan.</p>
+      <ul class="site-footer__links">
+        <li class="site-footer__item">
+          <a class="site-footer__link" href="https://github.com/"
+            >IT-Bryggans GitHub-profil</a
+          >
         </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="kompetenser.html">Kompetenser</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="projekt.html">Projekt</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="utbildning.html">Utbildning och erfarenhet</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="referenser.html">Referenser</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="kontakt.html">Kontakt</a>
+        <li class="site-footer__item">
+          <a class="site-footer__link" href="https://linkedin.com/"
+            >IT-Bryggans LinkedIn-sida</a
+          >
         </li>
       </ul>
-    </nav>
-  </header>
-
-  <main id="main-content" class="page-content">
-    <h1 class="page-content__title">Om mig</h1>
-    
-    <article class="profile-card">
-      <figure class="profile-card__figure">
-
-        <img class="profile-card__image" src="../images/mr-x.png" alt="Porträtt av den fiktiva systemutvecklaren Mr. X" width="200" height="300">
-        <figcaption class="profile-card__caption">Mr. X - Systemutvecklare under utbildning</figcaption>
-      </figure>
-
-      <div class="profile-card__body">
-        <h2 class="profile-card__heading">Vem är jag?</h2>
-        <p class="profile-card__text">Jag är en engagerad och lösningsorienterad student som studerar IT-Säkerhet och mjukvarutesting. Jag brinner för att göra digitala system trygga, säkra och buggfria för alla användare.</p>
-        
-        <h2 class="profile-card__heading">Vad jag vill arbeta med</h2>
-        <p class="profile-card__text">I framtiden vill jag arbeta med <strong>IT-säkerhet</strong> och <strong>mjukvarutesting</strong>. Mitt mål är att arbeta som säkerhetsspecialist eller testare där jag får hjälpa företag att hitta sårbarheter, kvalitetssäkra kod och bygga upp ett starkt skydd mot cyberhot.</p>
-
-
-        <button type="button" class="profile-card__action-btn"
-                data-js-action="expand"
-                data-info="bio-extended"
-                data-js-target="bio-container">
-          Läs mer om min bakgrund
-        </button>
-        <div id="bio-container" class="profile-card__target" data-js-target="bio-container" aria-live="polite"></div>
-      </div>
-    </article>
-  </main>
-
-  <footer class="site-footer">
-    <p class="site-footer__copyright">&copy; 2026 Mr. X Fiktiv portfolio för kursinlämning.</p>
-    <ul class="site-footer__links">
-      <li class="site-footer__item">
-        <a class="site-footer__link" href="https://github.com/">Mr. X GitHub-profil</a>
-      </li>
-      <li class="site-footer__item">
-        <a class="site-footer__link" href="https://linkedin.com/">Mr. X LinkedIn-profil</a>
-      </li>
-    </ul>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
