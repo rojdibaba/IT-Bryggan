@@ -3,19 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Utbildning - Mr.X Portfolio</title>
-  <meta name="description" content="Mr. X utbildningsbakgrund, kurser och tidigare arbetslivserfarenhet.">
+  <meta name="description" content="IT-Bryggans utbildningsbakgrund, kurser och tidigare arbetslivserfarenhet.">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
 </head>
 <body>
-  <!-- WCAG: Låter tangentbordsanvändare hoppa direkt till <main> -->
   <a class="skip-link" href="#main-content">Hoppa till huvudinnehåll</a>
 
   <header class="site-header">
-    <a class="site-header__brand" href="index.html">Mr. X</a>
+    <a class="site-header__brand" href="index.html">IT-Bryggan</a>
 
-    <!-- JS: Öppnar och stänger mobilmenyn genom att växla synlighet på menylistan -->
     <button type="button" class="site-header__menu-btn"
             data-js-action="toggle"
             data-menu-state="closed"
@@ -49,19 +46,53 @@
   </header>
 
   <main id="main-content" class="page-content">
-    <h1 class="page-content__title">Utbildning</h1>
+    <h1 class="page-content__title">Utbildning & Bakgrund</h1>
+    <p class = "page-content__intro">Våra konsulter har en gedigen bakgrund inom IT och systemutveckling från ledande svenska lärosäten.</p>
+
+    <section class = "education-section" aria-label="Konsulternas utbildning och erfarenhet">
+
+      <h2 class = "education-card__name">Anna Johansson</h2>
+      <dl class = "education-card__details">
+        <dt class = "education-card__term">Examen:</dt>
+        <dd class = "education-card__description">Masterexamen i Datavetenskap</dd>
+        <dt class = "education-card__term">Universitet:</dt>
+        <dd class = "education-card__description">Kungliga Tekniska Högskolan (KTH), Stockholm</dd>
+        <dt class = "education-card__term">År:</dt>
+        <dd class = "education-card__description">2018-2022</dd>
+      </dl>
+
+     
+    <h2 class = "education-card__name">Erik Svensson</h2>
+      <dl class = "education-card__details">
+        <dt class = "education-card__term">Examen:</dt>
+        <dd class = "education-card__description">Kandidatexamen i Informationssystem</dd>
+        <dt class = "education-card__term">Universitet:</dt>
+        <dd class = "education-card__description">Lunds Universitet, Lund</dd>
+        <dt class = "education-card__term">År:</dt>
+        <dd class = "education-card__description">2015-2018</dd>
+      </dl>
+
+      <h2 class = "education-card__name">Amir Ali</h2>
+      <dl class = "education-card__details">
+        <dt class = "education-card__term">Examen:</dt>
+        <dd class = "education-card__description">Masterexamen i Mjukvaruteknik</dd>
+        <dt class = "education-card__term">Universitet:</dt>
+        <dd class = "education-card__description">Chalmers Tekniska Högskola, Göteborg</dd>
+        <dt class = "education-card__term">År:</dt>
+        <dd class = "education-card__description">2016-2020</dd>
+      </dl>
+
     
-    <!-- Sidans unika sektioner och artiklar här -->
   </main>
 
   <footer class="site-footer">
-    <p class="site-footer__copyright">&copy; 2026 Mr. X Fiktiv portfolio för kursinlämning.</p>
+    <p class="site-footer__copyright">&copy; 2026 IT-Bryggan</p>
     <ul class="site-footer__links">
       <li class="site-footer__item">
-        <a class="site-footer__link" href="https://github.com/">Mr. X GitHub-profil</a>
+        <a class="site-footer__link" href="https://github.com/">IT-Bryggans GitHub-profil</a>
       </li>
       <li class="site-footer__item">
-        <a class="site-footer__link" href="https://linkedin.com/">Mr. X LinkedIn-profil</a>
+        <a class="site-footer__link" href="https://linkedin.com/">IT-Bryggans LinkedIn-profil</a>
       </li>
     </ul>
   </footer>

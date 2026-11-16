@@ -9,13 +9,11 @@
   <script src="js/script.js" defer></script>
 </head>
 <body>
-  <!-- WCAG: Låter tangentbordsanvändare hoppa direkt till <main> -->
   <a class="skip-link" href="#main-content">Hoppa till huvudinnehåll</a>
 
   <header class="site-header">
-    <a class="site-header__brand" href="index.html">Mr. X</a>
+    <a class="site-header__brand" href="index.html">IT-Bryggan</a>
 
-    <!-- JS: Öppnar och stänger mobilmenyn genom att växla synlighet på menylistan -->
     <button type="button" class="site-header__menu-btn"
             data-js-action="toggle"
             data-menu-state="closed"
@@ -49,19 +47,74 @@
   </header>
 
   <main id="main-content" class="page-content">
-    <h1 class="page-content__title">Referenser</h1>
+    <h1 class="page-content__title">Våra samarbeten</h1>
+    <p class = "page-content__intro">Vi på IT-Bryggan värdesätter våra samarbeten och strävar alltid efter att leverera högkvalitativa lösningar. Här är några av de referenser vi har fått från tidigare uppdragsgivare.</p>
+    <section class = "references-list" aria-label="Kundreferenser och omdömen">
+
+
+      <article class = "reference-card">
+        <h2 class = "reference-card__client">Trafikverket</h2>
+        <p class = "reference-card__project"><strong>Projekt: </strong>Säkerhetsgranskning av järnvägssystem</p>
+        <blockquote class = "reference-card__quote"> "IT-Bryggan levererade en grundlig och professionell säkerhetsgranskning av vårt järnvägssystem. Deras insikter och rekommendationer har varit ovärderliga för att förbättra vår säkerhet."</blockquote>
+        <cite class = "reference-card__source">- IT-Säkerhetschef, Trafikverket</cite>
+        <button type="button" class="reference-card__btn"
+                data-js-action= "expand-case"
+                data-client= "Trafikverket"
+                data-js-target= "reference-card__trafikverket"
+                aria-expanded= "false"
+                aria-controls= "case-details-Trafikverket">
+          Läs hela kundomdömet
+        </button>
+        <div id="case-details-Trafikverket" class="reference-card__details" hidden>
+        <p>Det har varit en stor fördel att samarbeta med IT-Bryggan. De har visat sig vara en pålitlig partner som levererar högkvalitativa lösningar.</p>
+        </div>
+      </article>
+
+      <article class = "reference-card">
+        <h2 class = "reference-card__client">Skatteverket</h2>
+        <p class = "reference-card__project"><strong>Projekt: </strong>Skalbar backend för skattehantering i C# och Python</p>
+        <blockquote class = "reference-card__quote"> "IT-Bryggan har varit en pålitlig partner i utvecklingen av vårt skattehanteringssystem. Deras expertis inom backend-utveckling och prestandaoptimering har varit avgörande för att uppnå våra mål."</blockquote>
+        <cite class = "reference-card__source">- IT-Projektledare, Skatteverket</cite>
+        <button type="button" class="reference-card__btn"
+                data-js-action="expand-case"
+                data-js-target="reference-card__skatteverket"
+                aria-expanded="false"
+                aria-controls="case-details-Skatteverket">
+          Läs hela kundomdömet
+        </button>
+        <div id="case-details-Skatteverket" class="reference-card__details" hidden>
+        <p>Tack vare IT-Bryggan har vi lyckats utveckla ett skalbart och effektivt skattehanteringssystem. Det har gett oss en stark position i att hantera våra skatteuppgifter på ett effektivt och säkert sätt.</p>
+        </div>    
+      </article>
+
+      <article class = "reference-card">
+        <h2 class = "reference-card__client">Försäkringskassan</h2>
+        <p class = "reference-card__project"><strong>Projekt: </strong>Utveckling av säkerhetslösningar för försäkringsadministration</p>
+        <blockquote class = "reference-card__quote"> "IT-Bryggan har visat enastående kompetens och engagemang i utvecklingen av våra säkerhetslösningar. Deras arbete har bidragit till att stärka vår förmåga att skydda våra medborgare."</blockquote>
+        <cite class = "reference-card__source">- IT-Säkerhetschef, Försäkringskassan</cite>
+        <button type="button" class="reference-card__btn"
+                data-js-action="expand-case"
+                data-js-target="reference-card__forsakringskassan"
+                aria-expanded="false"
+                aria-controls="case-details-Försäkringskassan">
+          Läs hela kundomdömet
+        </button>
+        <div id="case-details-Försäkringskassan" class="reference-card__details" hidden>
+        <p>Vi är mycket nöjda med IT-Bryggans arbete och deras förmåga att leverera högkvalitativa säkerhetslösningar. Deras insatser har varit avgörande för att förbättra vår säkerhet och skydda våra medborgare.</p>
+        </div> 
+      </article>
+
     
-    <!-- Sidans unika sektioner och artiklar här -->
   </main>
 
   <footer class="site-footer">
-    <p class="site-footer__copyright">&copy; 2026 Mr. X Fiktiv portfolio för kursinlämning.</p>
+    <p class="site-footer__copyright">&copy; 2026 IT-Bryggan</p>
     <ul class="site-footer__links">
       <li class="site-footer__item">
-        <a class="site-footer__link" href="https://github.com/">Mr. X GitHub-profil</a>
+        <a class="site-footer__link" href="https://github.com/">IT-Bryggan GitHub-profil</a>
       </li>
       <li class="site-footer__item">
-        <a class="site-footer__link" href="https://linkedin.com/">Mr. X LinkedIn-profil</a>
+        <a class="site-footer__link" href="https://linkedin.com/">IT-Bryggan LinkedIn-profil</a>
       </li>
     </ul>
   </footer>
