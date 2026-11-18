@@ -3,19 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projekt - Mr.X Portfolio</title>
-  <meta name="description" content="Utvalda systemutvecklings- och webbprojekt som Mr. X har genomfört.">
+  <meta name="description" content="Utvalda systemutvecklings- och webbprojekt som IT-Bryggan har genomfört.">
+  <title>Projekt & Erfarenheter - IT-Bryggan</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
 </head>
 <body>
-  <!-- WCAG: Låter tangentbordsanvändare hoppa direkt till <main> -->
   <a class="skip-link" href="#main-content">Hoppa till huvudinnehåll</a>
 
   <header class="site-header">
-    <a class="site-header__brand" href="index.html">Mr. X</a>
+    <a class="site-header__brand" href="index.html">IT-Bryggan</a>
 
-    <!-- JS: Öppnar och stänger mobilmenyn genom att växla synlighet på menylistan -->
     <button type="button" class="site-header__menu-btn"
             data-js-action="toggle"
             data-menu-state="closed"
@@ -49,51 +47,110 @@
   </header>
 
   <main id="main-content" class="page-content">
-    <h1 class="page-content__title">Projekt</h1>
-
-     <section class = "project-list" aria-label = "Lista över mina projekt">
-
-      <article class = "project-card">
-        <h2 class = "project-card__title">TireChangeSystem - Bokningssystem för däckbyte </h2>
-        <p class = "project-card__description">ett system utvecklat i C# för att hantera däckbyten. Arbetet drevs i sprintar via Trello 
-        och implementerar grundläggande designmönster för att säkerställa kodkvalitet.
-
-        <h3 class="project-card__subtitle">Tekniker</h3>
-      <ul class="project-card__tech-list">
-        <li class="project-card__tech-item">C#</li>
-        <li class="project-card__tech-item">Trello (Agilt arbetsflöde)</li>
-        <li class="project-card__tech-item">Designmönster</li>
-      </ul>
-
-    </article>
-    <article class = "project-card">
-      <h2 class = "project-card__title">Konsolapp för SverigePosten</h2>
-        <p class = "project-card__description">En konsolapp som möjligör bokning av paketleveranser och spårning av paket. 
-
-        <h3 class="project-card__subtitle">Tekniker</h3>
-      <ul class="project-card__tech-list">
-        <li class="project-card__tech-item">C#</li>
-        <li class="project-card__tech-item">Github Project (Agilt arbetsflöde)</li>
-        <li class="project-card__tech-item">Designmönster</li>
-      </ul>
-    </article>
-
-
-      </p>
-
-    </section>
+    <h1 class="page-content__title">Projekt & Erfarenhet</h1>
+    <p class="project-modal__text">Under detta projekt fokuserade IT-Bryggan på att isolera säkerhetsbrister i signalöverföringen. Vi implementerade grundläggande designmönster i C# och utförde penetrationstester som höjde säkerhetsklassningen markant.</p>    
     
-    <!-- Sidans unika sektioner och artiklar här -->
+    <section class = "project-list" aria-label = "Lista över IT-Bryggans projekt"></section>
+
+    <!-- Projekt för Trafikverket -->
+     <article class = "project-card">
+      <h2 class = "project-card__title">Säkerhetsgranskning av järnvägssystem</h2>
+      <p class = "project-card__client"><strong>Kund: </strong>Trafikverket</p>
+      <p class = "project-card__description">En omfattande säkerhetsgranskning och logikanalys av nationella signalsystem.</p>
+      <button type="button" class="project-card__btn" data-js-action="open-modal" data-js-target="modal-trafikverket">Läs teknisk djupdykning</button>
+     </article>
+
+     <!-- Projekt för Skatteverket -->
+     <article class = "project-card">
+      <h2 class = "project-card__title">Skalbar backend för skattehantering</h2>
+      <p class = "project-modal__text">IT-Bryggan utvecklade en skalbar backend-lösning för Skatteverket som hanterar stora mängder data och komplexa affärslogiker. Projektet inkluderade optimering av databasfrågor och implementering av säkerhetsprotokoll.</p>
+      <p class = "project-card__client"><strong>Kund: </strong>Skatteverket</p>
+      <p class = "project-card__description">Arkitektur och utveckling av ett nytt högpresterande backend-system i C# och Python.</p>
+      <button type="button" class="project-card__btn" data-js-action="open-modal" data-js-target="modal-skatteverket">Läs teknisk djupdykning</button>
+     </article>
+
+     <!-- Projekt för Försäkringskassan -->
+     <article class="project-card">
+        <h2 class="project-card__title">Säkerhetslösningar för försäkringsadministration</h2>
+        <p class="project-modal__text">IT-Bryggan utvecklade säkerhetslösningar för Försäkringskassan som garanterar säker hantering av känslig data och tillgänglighet av tjänster.</p>
+        <p class="project-card__client"><strong>Kund:</strong> Försäkringskassan</p>
+        <p class="project-card__description">Implementering av robusta säkerhetslager och tillgänglighetsanpassade gränssnitt för att säkerställa att medborgarnas data skyddas.</p>
+        <button type="button" class="project-card__btn" data-js-action="open-modal" data-js-target="modal-forsakringskassan">Läs teknisk djupdykning</button>
+        
+      </article>
+
+      <!-- MODAL: Skatteverket -->
+    <dialog id="modal-skatteverket" class="project-modal" aria-labelledby="modal-title-skatte">
+      <div class="project-modal__content">
+        <h2 id="modal-title-skatte" class="project-modal__title">Djupdykning: Skatteverket</h2>
+        <p class="project-modal__text">För att klara den extrema belastningen under deklarationsperioden byggde vi en skalbar serverarkitektur. Genom avancerad databashantering och optimerade API:er i Python och C# minskade vi svarstiderna avsevärt och eliminerade tidigare flaskhalsar.</p>
+        
+        <h3 class="project-modal__subtitle">Använda tekniker:</h3>
+        <ul class="project-modal__tech-list">
+          <li class="project-modal__tech-item">C# och Python</li>
+          <li class="project-modal__tech-item">Databashantering (SQL)</li>
+          <li class="project-modal__tech-item">GitHub Actions (CI/CD)</li>
+        </ul>
+
+        <button type="button" class="project-modal__close-btn"
+                data-js-action="close-modal"
+                data-js-target="modal-skatteverket">
+          Stäng fönstret
+        </button>
+      </div>
+    </dialog>
+
+    <!-- MODAL: Trafikverket -->
+    <dialog id="modal-trafikverket" class="project-modal" aria-labelledby="modal-title-trafik">
+      <div class="project-modal__content">
+        <h2 id="modal-title-trafik" class="project-modal__title">Djupdykning: Trafikverket</h2>
+        <p class="project-modal__text">Vi genomförde en omfattande säkerhetsgranskning av Trafikverkets signalsystem. Genom penetrationstester och logikanalys identifierade vi kritiska sårbarheter som kunde utnyttjas av obehöriga. Våra rekommendationer ledde till förbättrade säkerhetsprotokoll och ökad robusthet i systemet.</p>
+        
+        <h3 class="project-modal__subtitle">Använda tekniker:</h3>
+        <ul class="project-modal__tech-list">
+          <li class="project-modal__tech-item">Penetrationstestning</li>
+          <li class="project-modal__tech-item">Logikanalys</li>
+          <li class="project-modal__tech-item">C# för säkerhetsverktyg</li>
+        </ul>
+
+        <button type="button" class="project-modal__close-btn"
+                data-js-action="close-modal"
+                data-js-target="modal-trafikverket">
+          Stäng fönstret
+        </button>
+      </div>
+    </dialog>
+
+    <!-- MODAL: Försäkringskassan -->
+    <dialog id="modal-forsakringskassan" class="project-modal" aria-labelledby="modal-title-forsakring">
+      <div class="project-modal__content">
+        <h2 id="modal-title-forsakring" class="project-modal__title">Djupdykning: Försäkringskassan</h2>
+        <p class="project-modal__text">IT-Bryggan utvecklade säkerhetslösningar för Försäkringskassan som garanterar säker hantering av känslig data och tillgänglighet av tjänster. Vi implementerade robusta säkerhetslager och tillgänglighetsanpassade gränssnitt för att säkerställa att medborgarnas data skyddas.</p>
+        
+        <h3 class="project-modal__subtitle">Använda tekniker:</h3>
+        <ul class="project-modal__tech-list">
+          <li class="project-modal__tech-item">Säkerhetsprotokoll</li>
+          <li class="project-modal__tech-item">Tillgänglighetsanpassning</li>
+          <li class="project-modal__tech-item">C# och Python</li>
+        </ul>
+
+        <button type="button" class="project-modal__close-btn"
+                data-js-action="close-modal"
+                data-js-target="modal-forsakringskassan">
+          Stäng fönstret
+        </button>
+      </div>
+    </dialog>
   </main>
 
   <footer class="site-footer">
-    <p class="site-footer__copyright">&copy; 2026 Mr. X Fiktiv portfolio för kursinlämning.</p>
+    <p class="site-footer__copyright">&copy; 2026 IT-Bryggans tidigare projekt.</p>
     <ul class="site-footer__links">
       <li class="site-footer__item">
-        <a class="site-footer__link" href="https://github.com/">Mr. X GitHub-profil</a>
+        <a class="site-footer__link" href="https://github.com/">IT-Bryggan GitHub-profil</a>
       </li>
       <li class="site-footer__item">
-        <a class="site-footer__link" href="https://linkedin.com/">Mr. X LinkedIn-profil</a>
+        <a class="site-footer__link" href="https://linkedin.com/">IT-Bryggan LinkedIn-profil</a>
       </li>
     </ul>
   </footer>
