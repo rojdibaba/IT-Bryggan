@@ -6,7 +6,7 @@
   <title>Kontakt - Mr.X Portfolio</title>
   <meta name="description" content="Kontaktuppgifter och kontaktformulär för att komma i kontakt med Mr. X.">
   <link rel="stylesheet" href="../css/style.css">
-  <script src="js/script.js" defer></script>
+  <script src="../js/script.js" defer></script>
 </head>
 <body>
   <!-- WCAG: Låter tangentbordsanvändare hoppa direkt till <main> -->
@@ -90,8 +90,14 @@
         <label class="contact-form__radio-label" for="contact-email">Via e-post</label>
       </div>
       <div class="contact-form__radio-group">
-        <input class="contact-form__radio" type="radio" id="contact-linkedin" name="contact_method" value="LinkedIn">
-        <label class="contact-form__radio-label" for="contact-linkedin">Via LinkedIn</label>
+        <input class="contact-form__radio" type="radio" id="contact-phone" name="contact_method" value="Telefon">
+        <label class="contact-form__radio-label" for="contact-phone">Via telefon</label>
+      </div>
+    </fieldset>
+    <fieldset class="contact-form__fieldset" id="phone-fieldset" data-js-target="phone-fieldset" hidden>
+      <legend class="contact-form__legend">Telefonnummer (obligatoriskt vid telefonkontakt)</legend>
+      <div class="contact-form__field">
+        <input class="contact-form__input" type="tel" id="phone" name="phone" autocomplete="tel" placeholder="070-123 45 67" aria-label="Telefonnummer">
       </div>
     </fieldset>
 
