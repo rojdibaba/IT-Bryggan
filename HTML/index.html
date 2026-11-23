@@ -1,140 +1,202 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sv">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IT-Bryggan – Specialiserade IT-konsulter för kritiska projekt</title>
-  <meta name="description" content="IT-Bryggan matchar företag och myndigheter med seniora IT-konsulter inom säkerhet, systemutveckling och kvalitetssäkring.">
-  <link rel="stylesheet" href="../css/style.css">
-  <script src="../js/script.js" defer></script>
-</head>
-<body>
-  <a class="skip-link" href="#main-content">Hoppa till huvudinnehåll</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT-Bryggan – Specialiserade IT-konsulter för kritiska projekt</title>
+    <meta
+      name="description"
+      content="IT-Bryggan matchar företag och myndigheter med seniora IT-konsulter inom säkerhet, systemutveckling och kvalitetssäkring."
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Hoppa till huvudinnehåll</a>
 
-  <header class="site-header">
-    <div class="site-header__inner">
-      <a class="site-header__brand" href="index.html">IT-Bryggan</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-header__brand" href="index.html">IT-Bryggan</a>
 
-      <button type="button" class="site-header__menu-btn"
-              data-js-action="toggle"
-              data-menu-state="closed"
-              data-js-target="main-navigation"
-              aria-expanded="false">
-        Meny
-      </button>
+        <button
+          type="button"
+          class="site-header__menu-btn"
+          data-js-action="toggle"
+          data-menu-state="closed"
+          data-js-target="main-navigation"
+          aria-expanded="false"
+        >
+          Meny
+        </button>
 
-      <nav class="main-nav" aria-label="Huvudmeny" data-js-target="main-navigation">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--active" href="index.html" aria-current="page">Om oss</a>
+        <nav
+          class="main-nav"
+          aria-label="Huvudmeny"
+          data-js-target="main-navigation"
+        >
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a
+                class="main-nav__link main-nav__link--active"
+                href="index.html"
+                aria-current="page"
+                >Om oss</a
+              >
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="kompetenser.html">Kompetenser</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="projekt.html">Projekt</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="utbildning.html"
+                >Utbildning och erfarenhet</a
+              >
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="referenser.html">Referenser</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--cta" href="kontakt.html"
+                >Hitta konsult</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" class="page-content">
+      <section class="hero">
+        <div class="hero__content">
+          <h1 class="hero__title">
+            Rätt IT-specialist på plats – utan gissningar.
+          </h1>
+          <p class="hero__text">
+            Vi förser svenska företag och myndigheter med handplockade konsulter
+            inom IT-säkerhet, skalbar backend och testledning. Beskriv ert
+            uppdrag i vårt formulär och få en skräddarsydd konsultmatchning
+            direkt.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary button--wide" href="kontakt.html"
+              >Hitta konsult nu</a
+            >
+          </div>
+          <p
+            class="hero__status"
+            data-js-target="availability-status"
+            aria-live="polite"
+          ></p>
+        </div>
+
+        <figure class="hero__figure">
+          <img
+            class="hero__image"
+            src="../images/mr-x.png"
+            alt="Chefskonsult på IT-Bryggan"
+            width="360"
+            height="440"
+          />
+          <figcaption class="hero__caption">
+            Seniora specialister med bakgrund från KTH, Lund och Chalmers
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="metrics" aria-label="Nyckeltal">
+        <div class="metrics__item">
+          <span class="metrics__value">24 h</span>
+          <span class="metrics__label">Svarstid på konsultmatchning</span>
+        </div>
+        <div class="metrics__item">
+          <span class="metrics__value">100%</span>
+          <span class="metrics__label"
+            >Akademisk examen &amp; verifierad erfarenhet</span
+          >
+        </div>
+        <div class="metrics__item">
+          <span class="metrics__value">3+</span>
+          <span class="metrics__label">Samhällskritiska myndighetsuppdrag</span>
+        </div>
+      </section>
+
+      <section class="highlights">
+        <div class="section-header">
+          <h2 class="section-header__title">
+            Byggt för krävande teknikmiljöer
+          </h2>
+          <p class="section-header__subtitle">
+            Vi levererar inte bara resurser – vi levererar spetskompetens som
+            höjer säkerheten och leveranstakten från dag ett.
+          </p>
+        </div>
+
+        <div class="highlights__grid">
+          <article class="feature-card">
+            <span class="feature-card__tag">01 / Matchning</span>
+            <h3 class="feature-card__title">Datadriven konsultmatchning</h3>
+            <p class="feature-card__text">
+              Vårt formulär analyserar era tekniska krav och kopplar ihop er med
+              den specialist i teamet som har exakt rätt stack och erfarenhet.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-card__tag">02 / Säkerhet</span>
+            <h3 class="feature-card__title">
+              Dokumenterad myndighetserfarenhet
+            </h3>
+            <p class="feature-card__text">
+              Våra konsulter har säkrat signalsystem, skattehantering och
+              känslig data åt Trafikverket, Skatteverket och Försäkringskassan.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-card__tag">03 / Arkitektur</span>
+            <h3 class="feature-card__title">Modern teknikstack</h3>
+            <p class="feature-card__text">
+              Från penetrationstestning och CISCO-nätverk till högpresterande
+              backend i C#, .NET, Java och Python.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-banner">
+        <div class="cta-banner__content">
+          <h2 class="cta-banner__title">
+            Behöver ni förstärkning till nästa sprint?
+          </h2>
+          <p class="cta-banner__text">
+            Fyll i vårt korta kontaktformulär så återkommer vi med rätt
+            konsultprofil.
+          </p>
+        </div>
+        <a class="button button--primary" href="kontakt.html"
+          >Gå till kontaktformuläret</a
+        >
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p class="site-footer__copyright">
+          &copy; 2026 IT-Bryggan AB. Alla rättigheter förbehållna.
+        </p>
+        <ul class="site-footer__links">
+          <li class="site-footer__item">
+            <a class="site-footer__link" href="https://github.com/">GitHub</a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="kompetenser.html">Kompetenser</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="projekt.html">Projekt</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="utbildning.html">Utbildning och erfarenhet</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="referenser.html">Referenser</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--cta" href="kontakt.html">Hitta konsult</a>
+          <li class="site-footer__item">
+            <a class="site-footer__link" href="https://linkedin.com/"
+              >LinkedIn</a
+            >
           </li>
         </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main-content" class="page-content">
-    <section class="hero">
-      <div class="hero__content">
-        <span class="hero__badge">IT-konsulting &amp; Matchning</span>
-        <h1 class="hero__title">Rätt IT-specialist på plats – utan gissningar.</h1>
-        <p class="hero__text">Vi förser svenska företag och myndigheter med handplockade konsulter inom IT-säkerhet, skalbar backend och testledning. Beskriv ert uppdrag i vårt formulär och få en skräddarsydd konsultmatchning direkt.</p>
-        <div class="hero__actions">
-          <a class="button button--primary" href="kontakt.html">Matcha konsult nu</a>
-          <button type="button" class="button button--ghost"
-                  data-js-action="check-availability"
-                  data-specialty="all"
-                  data-js-target="availability-status">
-            Kontrollera tillgänglighet
-          </button>
-        </div>
-        <p class="hero__status" data-js-target="availability-status" aria-live="polite"></p>
       </div>
-
-      <figure class="hero__figure">
-        <img class="hero__image" src="../images/mr-x.png" alt="Chefskonsult på IT-Bryggan" width="360" height="440">
-        <figcaption class="hero__caption">Seniora specialister med bakgrund från KTH, Lund och Chalmers</figcaption>
-      </figure>
-    </section>
-
-    <section class="metrics" aria-label="Nyckeltal">
-      <div class="metrics__item">
-        <span class="metrics__value">24 h</span>
-        <span class="metrics__label">Svarstid på konsultmatchning</span>
-      </div>
-      <div class="metrics__item">
-        <span class="metrics__value">100%</span>
-        <span class="metrics__label">Akademisk examen &amp; verifierad erfarenhet</span>
-      </div>
-      <div class="metrics__item">
-        <span class="metrics__value">3+</span>
-        <span class="metrics__label">Samhällskritiska myndighetsuppdrag</span>
-      </div>
-    </section>
-
-    <section class="highlights">
-      <div class="section-header">
-        <h2 class="section-header__title">Byggt för krävande teknikmiljöer</h2>
-        <p class="section-header__subtitle">Vi levererar inte bara resurser – vi levererar spetskompetens som höjer säkerheten och leveranstakten från dag ett.</p>
-      </div>
-
-      <div class="highlights__grid">
-        <article class="feature-card">
-          <span class="feature-card__tag">01 / Matchning</span>
-          <h3 class="feature-card__title">Datadriven konsultmatchning</h3>
-          <p class="feature-card__text">Vårt formulär analyserar era tekniska krav och kopplar ihop er med den specialist i teamet som har exakt rätt stack och erfarenhet.</p>
-        </article>
-
-        <article class="feature-card">
-          <span class="feature-card__tag">02 / Säkerhet</span>
-          <h3 class="feature-card__title">Dokumenterad myndighetserfarenhet</h3>
-          <p class="feature-card__text">Våra konsulter har säkrat signalsystem, skattehantering och känslig data åt Trafikverket, Skatteverket och Försäkringskassan.</p>
-        </article>
-
-        <article class="feature-card">
-          <span class="feature-card__tag">03 / Arkitektur</span>
-          <h3 class="feature-card__title">Modern teknikstack</h3>
-          <p class="feature-card__text">Från penetrationstestning och CISCO-nätverk till högpresterande backend i C#, .NET, Java och Python.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="cta-banner">
-      <div class="cta-banner__content">
-        <h2 class="cta-banner__title">Behöver ni förstärkning till nästa sprint?</h2>
-        <p class="cta-banner__text">Fyll i vårt korta matchningsformulär så återkommer vi med rätt konsultprofil.</p>
-      </div>
-      <a class="button button--primary" href="kontakt.html">Gå till matchningsformuläret</a>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="site-footer__inner">
-      <p class="site-footer__copyright">&copy; 2026 IT-Bryggan AB. Alla rättigheter förbehållna.</p>
-      <ul class="site-footer__links">
-        <li class="site-footer__item">
-          <a class="site-footer__link" href="https://github.com/">GitHub</a>
-        </li>
-        <li class="site-footer__item">
-          <a class="site-footer__link" href="https://linkedin.com/">LinkedIn</a>
-        </li>
-      </ul>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
