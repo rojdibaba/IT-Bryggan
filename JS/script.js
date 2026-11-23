@@ -1,16 +1,12 @@
-// Vänta tills hela HTML-dokumentet har laddats
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Lyssna efter alla klick på hela sidan (Event Delegation)
     document.addEventListener('click', (event) => {
         
-        // Hitta närmaste klickade element som har ett data-js-action-attribut
         const trigger = event.target.closest('[data-js-action]');
         
         // Om användaren klickade någon annanstans än på våra knappar, gör ingenting
         if (!trigger) return; 
 
-        // Hämta värdena från krokarna vi satte i HTML-filen
         const action = trigger.getAttribute('data-js-action');
         const targetId = trigger.getAttribute('data-js-target');
 
@@ -18,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (action === 'open-modal') {
             const modal = document.getElementById(targetId);
             if (modal) {
-                // .showModal() är en inbyggd funktion för <dialog> som automatiskt lägger sig överst och mörkar bakgrunden
                 modal.showModal(); 
                 
                 // Lås bakgrunden så man inte kan skrolla upp och ner medan fönstret är öppet
@@ -38,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // BONUS/PROFFSTIPS: Stäng modalen om användaren klickar utanför rutan (på den mörka bakgrunden)
+    // Stänger modalen om användaren klickar utanför rutan
     const modals = document.querySelectorAll('.project-modal');
     modals.forEach(modal => {
         modal.addEventListener('click', (event) => {
@@ -73,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. FORMULÄRVALIDERING PÅ KONTAKTSIDAN
+    // FORMULÄRVALIDERING PÅ KONTAKTSIDAN
     const contactForm = document.querySelector('[data-js-action="validate-form"]');
     const feedbackElement = document.querySelector('[data-js-target="form-feedback"]');
 
