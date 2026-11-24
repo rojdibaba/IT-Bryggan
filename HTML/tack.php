@@ -32,13 +32,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tack för ditt meddelande - Mr.X Portfolio</title>
+  <title>Tack för ditt meddelande - IT-Bryggans Portfolio</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <header class="site-header">
-    <a class="site-header__brand" href="index.html">Mr. X</a>
+    <a class="site-header__brand" href="index.html">IT-Bryggans Portfolio</a>
   </header>
 
   <main id="main-content" class="page-content">
@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <?php if ($skickat): ?>
         <div class="alert alert--success">
           <h2>Tack för ditt meddelande, <?php echo $namn; ?>!</h2>
-          <p>Jag har mottagit ditt ärende gällande <strong><?php echo $amne; ?></strong> och återkommer via <strong><?php echo $kontaktmetod; ?></strong> så snart som möjligt.</p>
+          <p>Vi har mottagit ditt ärende gällande <strong><?php echo $amne; ?></strong> och återkommer via <strong><?php echo $kontaktmetod; ?></strong> så snart som möjligt.</p>
           <p><a href="index.html" class="contact-form__submit" style="display:inline-block; text-decoration:none; margin-top:1rem;">Tillbaka till startsidan</a></p>
         </div>
       <?php else: ?>
@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </main>
 
   <footer class="site-footer">
-    <p class="site-footer__copyright">&copy; 2026 Mr. X Fiktiv portfolio för kursinlämning.</p>
+    <p class="site-footer__copyright">&copy; 2026  IT-Bryggans Portfolio</p>
   </footer>
 
 </body>
