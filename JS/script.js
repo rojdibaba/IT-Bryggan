@@ -15,8 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const modal = document.getElementById(targetId);
             if (modal) {
                 modal.showModal(); 
-                
-                // Lås bakgrunden så man inte kan skrolla upp och ner medan fönstret är öppet
                 document.body.style.overflow = 'hidden'; 
             }
         }
@@ -25,10 +23,21 @@ document.addEventListener('DOMContentLoaded', () => {
         if (action === 'close-modal') {
             const modal = document.getElementById(targetId);
             if (modal) {
-                modal.close(); // .close() är också inbyggt!
-                
-                // Lås upp skrollningen på sidan igen
+                modal.close();
                 document.body.style.overflow = ''; 
+            }
+        }
+
+        // Logik för att FÄLLA UT / DÖLJA kundomdömen på referenser.html
+        if (action === 'expand-case') {
+            const detailsId = trigger.getAttribute('aria-controls');
+            const detailsBox = document.getElementById(detailsId);
+
+            if (detailsBox) {
+                const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+                detailsBox.hidden = isExpanded;
+                trigger.setAttribute('aria-expanded', String(!isExpanded));
+                trigger.textContent = isExpanded ? 'Läs hela kundomdömet' : 'Dölj kundomdömet';
             }
         }
     });
@@ -37,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const modals = document.querySelectorAll('.project-modal');
     modals.forEach(modal => {
         modal.addEventListener('click', (event) => {
-            // Kollar om muspekarens position är utanför själva innehållsrutan
             const rect = modal.getBoundingClientRect();
             const isInDialog = (rect.top <= event.clientY && event.clientY <= rect.top + rect.height
               && rect.left <= event.clientX && event.clientX <= rect.left + rect.width);
@@ -48,6 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // KONTAKTMETOD (TELEFON / E-POST)
     const contactRadios = document.querySelectorAll('input[name="contact_method"]');
     const phoneFieldset = document.querySelector('[data-js-target="phone-fieldset"]');
     const phoneInput = document.getElementById('phone');
@@ -91,7 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 errorMessage = 'Meddelandet måste vara minst 10 tecken långt.';
             }
 
-            // Om något är fel: stoppa formuläret från att skickas och visa felmeddelandet
             if (errorMessage !== '') {
                 event.preventDefault();
                 feedbackElement.textContent = errorMessage;
